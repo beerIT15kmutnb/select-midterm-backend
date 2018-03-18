@@ -11,6 +11,10 @@
   },
   "main": "lib/index.js",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "co-express": "^2.0.0",
+    "express": "^4.16.3",
+    "firebase": "^4.11.0",
     "firebase-admin": "~5.8.1",
     "firebase-functions": "^0.8.1"
   },

@@ -1,0 +1,34 @@
+[debug] [2018-03-18T09:27:12.064Z] ----------------------------------------------------------------------
+[debug] [2018-03-18T09:27:12.066Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\beer\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions
+[debug] [2018-03-18T09:27:12.066Z] CLI Version:   3.17.6
+[debug] [2018-03-18T09:27:12.066Z] Platform:      win32
+[debug] [2018-03-18T09:27:12.066Z] Node Version:  v8.9.4
+[debug] [2018-03-18T09:27:12.067Z] Time:          Sun Mar 18 2018 16:27:12 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-18T09:27:12.067Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-18T09:27:12.080Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-18T09:27:12.081Z] > authorizing via signed-in user
+[debug] [2018-03-18T09:27:12.083Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/midtermselect  
+  
+ Sun Mar 18 2018 16:27:12 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-18T09:27:13.240Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-18T09:27:13.242Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/midtermselect/tokens  
+  
+ Sun Mar 18 2018 16:27:13 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-18T09:27:14.402Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-18T09:27:14.404Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/midtermselect  
+  
+ Sun Mar 18 2018 16:27:14 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-18T09:27:15.726Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\beer\Desktop\midtem\backend'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-03-18T09:27:25.720Z] Fetching environment
+[debug] [2018-03-18T09:27:25.743Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/613631582566:getServerAppConfig  
+  
+ Sun Mar 18 2018 16:27:25 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-18T09:27:26.588Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-18T09:27:26.589Z] Starting @google-cloud/functions-emulator
+[debug] [2018-03-18T09:27:31.828Z] Parsing function triggers
+[info] +  functions: apiUrl: http://localhost:5000/midtermselect/us-central1/apiUrl

@@ -3,8 +3,9 @@ import * as firebase from "firebase";
 import * as express from 'express';
 import * as wrap from 'co-express';
 import * as bodyParser from 'body-parser';
-
+import * as cors from 'cors';
 const router = express();
+router.use(cors());
 router.use(bodyParser.json());
 router.use((req, res, next) => {
     res.header("Access-Control-Allow-Headers", "Access-Control-Allow-Headers")
@@ -29,7 +30,7 @@ router.get('/', (req, res, next) => {
 });
 router.get('/data', async (req, res, next) => {
     let midtermselect = []
-    await database.ref().once('value')
+    await database.ref('peopleIncome').once('value')
     .then(snapshot => {
         midtermselect = snapshot.val()
     })
@@ -48,7 +49,7 @@ router.get('/search/:data', async (req, res, next) => {
     .catch(err =>{
         res.send({ ok: false, message: 'database false' });
     })
-    res.send({ ok: true, message: midtermselect });
+    res.send({ ok: true, row: midtermselect });
 });
 
 export const apiUrl = functions.https.onRequest(router);

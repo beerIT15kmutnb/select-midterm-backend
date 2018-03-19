@@ -38,4 +38,17 @@ router.get('/data', async (req, res, next) => {
     })
     res.send({ ok: true, message: midtermselect });
 });
+router.get('/search/:data', async (req, res, next) => {
+    let data = req.params.data
+    let midtermselect = []
+    await database.ref().once('value')
+    .then(snapshot => {
+        midtermselect = snapshot.val()
+    })
+    .catch(err =>{
+        res.send({ ok: false, message: 'database false' });
+    })
+    res.send({ ok: true, message: midtermselect });
+});
+
 export const apiUrl = functions.https.onRequest(router);

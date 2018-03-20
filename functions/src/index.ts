@@ -30,19 +30,20 @@ router.get('/', (req, res, next) => {
 });
 router.get('/data', async (req, res, next) => {
     let midtermselect = []
-    await database.ref('peopleIncome').once('value')
+    await database.ref().once('value')
     .then(snapshot => {
         midtermselect = snapshot.val()
     })
     .catch(err =>{
-        res.send({ ok: false, message: 'database false' });
+        res.send({ ok: false, message: err });
     })
+    
     res.send({ ok: true, message: midtermselect });
 });
-router.get('/search/:data', async (req, res, next) => {
+router.get('/data/:data', async (req, res, next) => {
     let data = req.params.data
     let midtermselect = []
-    await database.ref().once('value')
+    await database.ref(data).once('value')
     .then(snapshot => {
         midtermselect = snapshot.val()
     })
